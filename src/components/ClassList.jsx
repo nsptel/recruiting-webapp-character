@@ -20,7 +20,7 @@ export default function ClassList({ attrList }) {
   };
 
   return (
-    <div style={{ marginBottom: "10px" }}>
+    <div>
       {classList.map((item) => {
         return (
           <span
