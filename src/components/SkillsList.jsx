@@ -33,7 +33,6 @@ export default function SkillsList({ attrList }) {
         skill.modifierPoints = attrList.filter(
           (attr) => attr.name === skill.attributeModifier
         )[0].modifier;
-        debugger;
         if (skill.id === id) {
           return {
             ...skill,
