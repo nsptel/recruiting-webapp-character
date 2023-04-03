@@ -9,6 +9,7 @@ function App() {
     id: ind + 1,
     name: attr,
     value: 10,
+    modifier: 0,
   }));
   const [attrList, setAttrList] = useState(attrs);
 

@@ -5,10 +5,12 @@ export default function AttributeList({ list, updateList }) {
     updateList(
       list.map((prevAttr) => {
         if (prevAttr.id === id) {
-          return {
+          const newAttr = {
             ...prevAttr,
             value: prevAttr.value + updateWith,
           };
+          newAttr.modifier = Math.floor((newAttr.value - 10) / 2);
+          return newAttr;
         }
         return prevAttr;
       })
@@ -21,7 +23,7 @@ export default function AttributeList({ list, updateList }) {
         return (
           <div key={attr.id}>
             <span style={{ display: "block" }}>
-              {attr.name}: {attr.value}
+              {attr.name}: {attr.value}, modifier: {attr.modifier}
             </span>
             <div>
               <button onClick={() => updateAttr(attr.id, -1)}>-</button>
